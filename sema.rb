@@ -1,8 +1,8 @@
 class Sema < Formula
   desc "Semantic commit tool"
   homepage "https://github.com/sharpvik/sema#readme"
-  url "https://github.com/sharpvik/sema/archive/refs/tags/v1.1.0.tar.gz"
-  sha256 "f72321388e23c767ca3009cc511c63b0a375c330632ff465e0aa5453fac235c6"
+  url "https://github.com/sharpvik/sema/archive/refs/tags/v2.0.0.tar.gz"
+  sha256 "daf03a5febc1c4a64e606a73bc25073352423641d93496bd8d6421b6feb0e01b"
   license "MIT"
 
   depends_on "go" => :build
