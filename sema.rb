@@ -5,11 +5,11 @@
 class Sema < Formula
   desc ""
   homepage "https://github.com/sharpvik/sema"
-  version "3.0.3"
+  version "3.0.4"
 
   on_macos do
-    url "https://github.com/sharpvik/sema/releases/download/v3.0.3/sema_Darwin_all.tar.gz"
-    sha256 "aecd8ce56d29c92a2c4a28d8d40791d0ecedee930a76ab497002f71446ac849b"
+    url "https://github.com/sharpvik/sema/releases/download/v3.0.4/sema_Darwin_all.tar.gz"
+    sha256 "285f290066c8f3a80890f5d4b6e09d56aaa28a45f8aa48392f97b736b6c4e9ca"
 
     def install
       bin.install "sema"
@@ -17,17 +17,17 @@ class Sema < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sharpvik/sema/releases/download/v3.0.3/sema_Linux_arm64.tar.gz"
-      sha256 "e61bcf4506535b3793927a41032a03676636862b1d6c0f288fb305ab176743cb"
+    if Hardware::CPU.intel?
+      url "https://github.com/sharpvik/sema/releases/download/v3.0.4/sema_Linux_x86_64.tar.gz"
+      sha256 "075c3739d3e5d76268286dd54cc93a385ab0034bea8468d9e08f64e8028174f8"
 
       def install
         bin.install "sema"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/sharpvik/sema/releases/download/v3.0.3/sema_Linux_x86_64.tar.gz"
-      sha256 "0d81ea77ff5a3d52be65be1885ce7ffee8fbe44a533dc546aa1ebdf56f353028"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/sharpvik/sema/releases/download/v3.0.4/sema_Linux_arm64.tar.gz"
+      sha256 "99906c61e6b52f76a521b6319fc5508d1b43df9c03a813783da9d1509fdb2ad2"
 
       def install
         bin.install "sema"
